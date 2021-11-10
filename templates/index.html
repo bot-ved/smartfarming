@@ -1,0 +1,152 @@
+
+
+{% block body %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Atmanirbhar Farming</title>
+    <style type="text/css">
+      #navbar{
+        font-size: 37px;
+
+      }
+      body {
+  font-family: 'Times New Roman', serif;
+}
+    </style>
+  </head>
+  <body>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- banner -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 100px;">
+    <a class="navbar-brand" href="#">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" width="30" height="30" alt="">
+  </a>
+  <a class="navbar-brand" href="#">Atmanirbhar Farming</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="{{ url_for('home') }}">Home
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('crop_recommend') }}">Crop Recommendtion</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('fertilizer_recommendation') }}">Fertilizer Recommendtion</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('disease_prediction') }}">Disease</a>
+					</li>
+				</ul>
+  </div>
+</nav>
+<!-- //banner -->
+<!-- Image+ content-->
+<div class="content" style="background-image: url('/static/images/3.jpg'); opacity: 0.9;">
+  <div class="text-center text-light" style="padding-top:200px ;padding-bottom:200px;">
+    <h1> Atmanirbhar Farming</h1>
+        <h3>Get Informed Decisions About Your Farming Strategy.</h3>
+        <ul style="list-style-type: none;"> 
+            <li >1. What crop to plant here? </li>
+            <li>2. What fertilizer to use? </li>
+            <li>3. Which disease do your crop have?</li>
+            <li>4. How to cure the disease?</li>
+         </ul>
+  </div>
+  
+</div>
+<!-- Image+ content-->
+<!-- core values -->
+
+<!-- //core values -->
+
+<!-- Products & Services -->
+<div class="conatainer" style="margin: 70px;">
+  <div class="row">
+                      
+    <div class="col shadow p-3 mb-5 bg-white rounded" style="background-image: url('/static/images/2.jpg' );height: 100%;width: 100%;">
+      <div class="text-center text-light" style="padding-top:100px; padding-bottom: 40px; "><p style="font-size: 50px;">About Us</p></div>
+
+    </div>
+    <div class="col shadow p-3 mb-5 bg-white rounded">
+      <h2 style="font-size:26px">IMPROVING AGRICULTURE, IMPROVING LIVES, CULTIVATING CROPS TO MAKE FARMERS INCREASE PROFIT.</h2>
+      <p >We use state-of-the-art machine learning and deep learning technologies to help you guide through the entire farming process. Make informed decisions to understand the demographics of your area, understand the factors that affect your crop and keep them healthy for a super awesome successful yield.</p>
+    </div>
+   
+  </div>
+</div>
+
+
+
+<!--Introuction-->
+<!--Services-->
+<div class="container">
+  <h1 class="text-center">Our Services</h1>
+  
+  <div class="card-deck ">
+  <div class="card  shadow p-3 mb-5 bg-white rounded">
+    <div class="card-body text-center">
+      <p class="card-text">
+        <h3>Crop Recommendation</h3>
+        <p> Recommendation about the type of crops to be cultivated which is best suited
+              for the respective conditions</p>
+              <a href="{{ url_for('crop_recommend') }}" class="button btn btn-primary">Predict</a>
+      </p>
+    </div>
+  </div>
+  <div class="card  shadow p-3 mb-5 bg-white rounded ">
+    <div class="card-body text-center">
+      <p class="card-text">
+        <h3>Fertilizer Recommendation</h3>
+        <p>Recommendation about the type of fertilizer best suited for the particular soil
+</p>
+<a href="{{ url_for('fertilizer_recommendation') }}" class="button btn btn-primary">Predict</a>
+      </p>
+    </div>
+  </div>
+  <div class="card  shadow p-3 mb-5 bg-white rounded">
+    <div class="card-body text-center">
+      <p class="card-text">
+        <h3>Crop Disease Prediction</h3>
+          <p>Predicting the name and causes of crop disease and suggestions to cure it</p>
+          <a href="{{ url_for('disease_prediction') }}" class="button btn btn-primary">Predict</a>
+      </p>
+    </div>
+  </div>
+ 
+</div>
+
+</div>
+
+
+
+
+<!--Services-->
+
+<!--FOOTER-->
+<div class="container-fluid bg-dark" style="padding-top: 100px;padding-bottom: 50px;"><h2 class="text-center text-light">Atmanirbhar Farming</h2></div>
+<!--FOOTER-->
+</body>
+
+</html>
+
+{% endblock %}
